@@ -39,8 +39,8 @@ const JobListingPage = () => {
         <div className="job-listings">
           {jobs.map((job) => (
             <div key={job.id} className="job-listing">
-              <h2>{job.title}</h2>
               <img src={`${job.logo}`} alt={`${job.name}`} />
+              <h2>{job.title}</h2>
               <p>{job.name}</p>
               <p>{job.date}</p>
               <p>{job.country}</p>

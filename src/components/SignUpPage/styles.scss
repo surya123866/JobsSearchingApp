@@ -4,9 +4,6 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  @include small-screen {
-    width: 400px;
-  }
   .signup-form {
     max-width: 400px;
     margin: 0 auto;

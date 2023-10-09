@@ -1,18 +1,16 @@
 @import "../../style-config//mixins.scss";
+@import "../../style-config/variable.scss";
 
 .header-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-width: 100vw;
-  margin: 0 auto;
   background-color: #35424a;
   color: #ffffff;
-  padding: 10px 0;
-  height: 80px;
+  padding: 20px;
   width: 100%;
   @include small-screen {
-    width: 400px;
+    justify-content: space-between;
   }
   .logo {
     text-align: left;
@@ -20,13 +18,52 @@
       max-width: 100%;
     }
   }
-
+  .mobile-menu {
+    display: none;
+    @include small-screen {
+      display: inline;
+      position: relative;
+      z-index: 99;
+      padding: 30px;
+    }
+  }
   .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    height: auto;
+    gap: unset;
+    background-color: transparent;
+    @include small-screen {
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 40px;
+      position: fixed;
+      width: 100%;
+      height: 25%;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      z-index: 9;
+    }
+    &.active {
+      width: 100%;
+      display: flex;
+    }
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
+      @include small-screen {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
       li {
         margin-right: 20px;
         font-size: 20px;
@@ -41,8 +78,11 @@
       }
     }
   }
-
   .search-bar {
+    display: inline;
+    @include small-screen {
+      display: none;
+    }
     input {
       width: 300px;
       height: 35px;
@@ -57,7 +97,6 @@
       border-radius: 4px;
       font-size: 16px;
       cursor: pointer;
-
       &:hover {
         background-color: #0056b3;
       }

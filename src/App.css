@@ -1,9 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   background-color: rgba(192, 119, 192, 0.2);
   background-size: cover;
   background-repeat: no-repeat;
