@@ -1,4 +1,5 @@
-/* LoginForm.scss */
+@import "../../style-config/mixins.scss";
+
 .Loginform-container {
   display: flex;
   justify-content: center;
@@ -13,10 +14,17 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    @include small-screen {
+      max-width: 250px;
+    }
 
     h2 {
       font-size: 24px;
       margin-bottom: 20px;
+      @include small-screen {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
     }
 
     input {
@@ -25,6 +33,9 @@
       margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      @include small-screen {
+        padding: 5px;
+      }
 
       &:focus {
         border-color: #007bff;

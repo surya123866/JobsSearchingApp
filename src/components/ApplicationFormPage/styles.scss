@@ -12,10 +12,19 @@
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     width: 500px;
     height: 600px;
+    @include small-screen {
+      width: 420px;
+      height: 450px;
+    }
     h2 {
       font-size: 32px;
       margin-bottom: 20px;
       margin-left: 50px;
+      @include small-screen {
+        font-size: 25px;
+        margin-bottom: 10px;
+        margin-left: 35px;
+      }
     }
 
     .error {
@@ -30,6 +39,9 @@
       .form-group {
         margin-bottom: 15px;
         text-align: left;
+        @include small-screen {
+          margin-bottom: 10px;
+        }
 
         label {
           display: block;
@@ -45,10 +57,17 @@
           border: 1px solid #ccc;
           border-radius: 4px;
           font-size: 16px;
+          @include small-screen {
+            font-size: 10px;
+            padding: 8px;
+          }
         }
 
         textarea {
           height: 150px;
+          @include small-screen {
+            height: 100px;
+          }
         }
 
         input[type="file"] {
@@ -66,6 +85,10 @@
         cursor: pointer;
         margin-top: 10px;
         display: inline-block;
+        @include small-screen {
+          padding: 8px 16px;
+          font-size: 10px;
+        }
 
         &:hover {
           background-color: #0056b3;
