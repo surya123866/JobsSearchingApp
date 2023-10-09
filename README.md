@@ -1,71 +1,71 @@
-# Getting Started with Create React App
+# GitHub Job Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the GitHub Job Portal! This is a web application designed to help job seekers find relevant job postings on GitHub and apply for them. Below are the key features and steps to implement in this project.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **Login/Signup:**
+   - Users can create an account or log in to the portal with minimal but relevant login details.
 
-### `npm start`
+2. **Session Management:**
+   - Utilize `localStorage` or `sessionStorage` to maintain the session for a logged-in user.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Landing Page:**
+   - Create a landing page with a single input asking the user what programming language they are looking for a job in.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **GitHub API Integration:**
+   - Upon language selection, make a request to the GitHub public API to search for jobs that require developers with knowledge of the selected language.
 
-### `npm test`
+5. **Job Listings:**
+   - Display a list of job postings related to the selected language.
+   - Include an option for users to view detailed job listings.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. **Job Details:**
+   - When a user selects a job posting, make another request to the GitHub API to fetch the specific job details.
 
-### `npm run build`
+7. **Job Application:**
+   - Provide an option for users to apply for a selected job.
+   - When the user clicks on "Apply," show a form asking for the following details:
+     - Name
+     - Email
+     - Cover Letter Note
+     - Optional file upload for resume, cover letter, etc.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+8. **Application Preview:**
+   - After the user submits the application form, show them a success page with a preview of what their application looks like.
+   - Use state management within the app to display this information.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+9. **Design and Validation:**
+   - Implement a user-friendly and responsive design for the entire application.
+   - Add appropriate form validations and rules to ensure data accuracy.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to Implement
 
-### `npm run eject`
+1. **Setup:**
+   - Create a new GitHub repository for your project.
+   - Initialize your project using a web development framework or library of your choice (e.g., React, Angular, Vue.js).
+   - Set up the necessary project structure and dependencies.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Authentication:**
+   - Implement the login/signup functionality using your chosen authentication method.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Language Selection:**
+   - Design the landing page with a language input field.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **GitHub API Integration:**
+   - Integrate the GitHub public API to search for job postings based on the selected language.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. **Job Listings:**
+   - Display the job listings on the landing page and allow users to view detailed job descriptions.
 
-## Learn More
+6. **Job Application:**
+   - Create a form for job applications, including fields for name, email, cover letter note, and file upload.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7. **Application Preview:**
+   - After form submission, use state management to show a success page with a preview of the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+8. **Design and Validation:**
+   - Design the user interface, ensuring a user-friendly and responsive layout.
+   - Implement form validations and other rules as needed.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# JobsSearchingApp
+Remember to keep your project well-documented and organized. You can use various web development tools and libraries to simplify the implementation of these features. Good luck with your GitHub Job Portal project!
